@@ -45,7 +45,7 @@ All agents are integrated with a **centralized logging system** for debugging, m
 ## 🎬 Demo
 
 ### Video Walkthrough
-[📺 Watch Full Demo](#) *(Add your demo video link here)*
+[📺 Watch Full Demo](#) *(will-soon)*
 
 ### Quick Feature Demos
 - [Chat Agent with Web Search](#)
@@ -769,7 +769,7 @@ Before installing, ensure you have:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ai-multi-agent-system.git
+git clone https://github.com/Priyash-Das/Student-Academic-Career-Assistant-Agent.git
 cd Student-Academic-&-Career-Assistant
 ```
 
@@ -832,7 +832,7 @@ pip install -r website_builder/requirements.txt
 
 ### Step 4: ⚙️ Configuration (Configure Environment Variables)
 
-Create `.env` / Rename `.env.txt` to `.env`:
+Create `.env` / Rename `.env.example.txt` to `.env`:
 
 Edit `Student-Academic-&-Career-Assistant/.env` and add your API keys:
 
