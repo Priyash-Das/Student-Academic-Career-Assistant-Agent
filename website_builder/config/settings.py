@@ -1,0 +1,7 @@
+APP_NAME = "AI-Powered Website Builder"
+TEMP_PREVIEW_DIR = "temp_preview"
+DEFAULT_HTML_FILENAME = "index.html"
+STATUS_READY = "Ready"
+STATUS_PROCESSING = "Processing"
+STATUS_COMPLETED = "Completed"
+STATUS_ERROR = "Error"
