@@ -2,7 +2,7 @@
 
 ---
 
-> AI Multi-Agent System
+> AI-powered Multi-Agent System
 
 > A comprehensive, production-ready AI assistant platform powered by multiple specialized agents for ***chat***, ***study***, ***transcription***, ***resume building***, and ***website generation***.
 
@@ -28,11 +28,11 @@ This project solves these problems by providing a **unified, intelligent platfor
 
 This system provides five core functionalities through specialized agents:
 
-1. **💬 General Chat Agent**: Intelligent conversational AI with web search capabilities
-2. **📚 Study Buddy Agent**: PDF analysis, explanations, summaries, and quiz generation
-3. **🎙️ Voice-to-Notes Agent**: Audio transcription and automated lecture note generation
-4. **📄 Resume Builder Agent**: AI-powered resume creation with professional DOCX formatting
-5. **🌐 Website Builder Agent**: Natural language to website generation
+1. **💬  `General Chat Agent`** : Intelligent conversational AI with web search capabilities
+2. **📚  `Study Buddy Agent`** : PDF analysis, explanations, summaries, and quiz generation
+3. **🎙️  `Voice-to-Notes Agent`** : Audio transcription and automated lecture note generation
+4. **📄  `Resume Builder Agent`** : AI-powered resume creation with professional DOCX formatting
+5. **🌐  `Website Builder Agent`** : Natural language to website generation
 
 All agents are integrated with a **centralized logging system** for debugging, monitoring, and comprehensive audit trails.
 
