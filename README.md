@@ -4,7 +4,7 @@
 
 > AI Multi-Agent System
 
-> A comprehensive, production-ready AI assistant platform powered by multiple specialized agents for chat, study, transcription, resume building, and website generation.
+> A comprehensive, production-ready AI assistant platform powered by multiple specialized agents for ***chat***, ***study***, ***transcription***, ***resume building***, and ***website generation***.
 
 ---
 
