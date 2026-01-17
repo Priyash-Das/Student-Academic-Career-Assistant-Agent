@@ -1,0 +1,2 @@
+RESUME_GENERATION_MODEL = "llama-3.3-70b-versatile"
+EDITOR_ASSIST_MODEL = "llama-3.3-70b-versatile"
