@@ -832,7 +832,7 @@ pip install -r website_builder/requirements.txt
 
 ### Step 4: ⚙️ Configuration (Configure Environment Variables)
 
-Create `.env` / Rename `.env.example.txt` to `.env`:
+Create `.env` / Rename `env.example.txt` to `.env`:
 
 Edit `Student-Academic-&-Career-Assistant/.env` and add your API keys:
 
