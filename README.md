@@ -40,6 +40,43 @@ All agents are integrated with a **centralized logging system** for debugging, m
 
 ## 📸 Screenshots
 
+<table>
+  <tr>
+    <td width="33%">
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Student-Academic-Career-Assistant/1.png" alt="Preview 1" width="100%">
+      <p align="center">Study Buddy Agent (EXPLAIN)</p>
+    </td>
+    <td width="33%" rowspan="4">
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Student-Academic-Career-Assistant/4.png" alt="Preview 4" height="100%">
+      <p align="center">General Chat Agent</p>
+    </td>
+    <td width="33%">
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Student-Academic-Career-Assistant/2.png" alt="Preview 5" width="100%">
+      <p align="center">Study Buddy Agent (QUIZ)</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Student-Academic-Career-Assistant/3.png" alt="Preview 7" width="100%">
+      <p align="center">Resume Builder Agent</p>
+    </td>
+    <td>
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Student-Academic-Career-Assistant/5.png" alt="Preview 6" width="100%">
+      <p align="center">Website Builder Agent</p>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Student-Academic-Career-Assistant/6.png" alt="Preview 2" width="100%">
+      <p align="center">Voice-to-Notes Agent</p>
+    </td>
+    <td>
+      <img src="https://github.com/Priyash-Das/Photos/blob/main/Student-Academic-Career-Assistant/7.png" alt="Preview 3" width="100%">
+      <p align="center">Centralized Log Viewer</p>
+    </td>
+  </tr>
+</table>
+
 ---
 
 ## 🎬 Demo
@@ -47,11 +84,11 @@ All agents are integrated with a **centralized logging system** for debugging, m
 ### Video Walkthrough
 [📺 Watch Full Demo](#) *(will-soon)*
 
-### Quick Feature Demos
-- [Chat Agent with Web Search](#)
-- [Study Buddy PDF Analysis](#)
+### More Screenshots
+- [Chat Agent](#)
+- [Study Buddy](#)
 - [Audio to Lecture Notes](#)
-- [Resume Generation](#)
+- [Resume Builder](#)
 - [Website Builder](#)
 
 ---
