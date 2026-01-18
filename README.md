@@ -296,6 +296,31 @@ Generate complete, responsive websites from natural language descriptions.
 
 ---
 
+### 6. 📊 Centralized Log Viewer
+
+A comprehensive dashboard providing real-time visibility into the system's internal operations, ensuring transparency and ease of debugging across all agents.
+
+**Key Features:**
+- **Unified Log Stream**: Aggregates logs from Chat, Study Buddy, Resume, and Website agents into a single view.
+- **Advanced Filtering**: Filter entries by **Agent** (e.g., RESUME_AGENT, VOICE_NOTES) or **Log Level** (DEBUG, INFO, ERROR, AUDIT).
+- **Search Capabilities**: Real-time keyword search to find specific transactions or errors.
+- **Detailed Inspection**: Interactive view to inspect complex JSON payloads and error tracebacks.
+- **Data Export**: Export logs to JSON for external analysis or copy to clipboard for reporting.
+
+**Technical Implementation:**
+
+> System Architecture:
+> - **Singleton Pattern**: Uses a thread-safe `CentralLogger` class to ensure consistent logging across threads.
+> - **Structured Logging**: Captures metadata including timestamps, module names, line numbers, and user actions.
+> - **Dual-Write Strategy**: Writes simultaneously to rotating log files (in `logs/`) and an in-memory buffer for the UI.
+
+**Use Cases:**
+- **Debugging**: Quickly identifying why a PDF failed to parse or an API call failed.
+- **Audit Trails**: Tracking user actions.
+- **Performance Monitoring**: Viewing agent start/end times to track latency.
+
+---
+
 ## 🏗️ Architecture & Project Structure
 
 ### High-Level Architecture
@@ -303,196 +328,44 @@ Generate complete, responsive websites from natural language descriptions.
 ```
         ┌─────────────────────────────────────────────────────────────┐
         │                   User Interface (Tkinter)                  │
-        │             ui/app.py – Unified Desktop Application         │
-        └───────────────────────────────┬─────────────────────────────┘
-                                        │
-        ┌───────────────────────────────┴─────────────────────────────┐
-        │                   Supervisor Agent Layer                    │
-        │        supervisor/supervisor_agent.py – Orchestration       │
-        └───┬─────────┬───────────────┬───────────────┬──────────┬────┘
-            │         │               │               │          │
-┌───────────▼┐ ┌──────▼──────┐ ┌──────▼──────┐ ┌──────▼───────┐ ┌▼──────────────┐
-│ Chat Agent │ │ Study Buddy │ │ Voice Notes │ │ Resume Agent │ │ Website Agent │
-└────────────┘ └─────────────┘ └─────────────┘ └──────────────┘ └───────────────┘
-
+        │             ui/app.py – Unified Desktop Application         │< ─ ─ ─ ─ ─ ─┐
+        └───────────────────────────────┬─────────────────────────────┘             │
+                                        │                                           │
+        ┌───────────────────────────────┴─────────────────────────────┐             │
+        │                   Supervisor Agent Layer                    │             │
+        │        supervisor/supervisor_agent.py – Orchestration       │             │
+        └───┬─────────┬───────────────┬───────────────┬──────────┬────┘             │
+            │         │               │               │          │                  │
+┌───────────▼┐ ┌──────▼──────┐ ┌──────▼──────┐ ┌──────▼───────┐ ┌▼──────────────┐   │
+│ Chat Agent │ │ Study Buddy │ │ Voice Notes │ │ Resume Agent │ │ Website Agent │   │
+└────────────┘ └─────────────┘ └─────────────┘ └──────────────┘ └───────────────┘   │
+            │         │               │               │          │                  │
+            └─────────┴───────────────┴───────────────┴──────────┘                  │
+                                      │                                             │
+                     ┌────────────────▼────────────────┐   ┌────────────────────┐   │
+                     │       Centralized Logging       │   │Log Viewer(UI Panel)│ ─ ┘
+                     │              System             │   └─────────▲──────────┘   
+                     └─────────────────────────────────┘ ─ ─ ─ ─ ─ ─ ┘
 ```
 
 ### Directory Structure
 
 ```
 Student-Academic-&-Career-Assistant/
-├─ .env
 ├─ agents
-│  ├─ resume_agent.py
-│  ├─ study_buddy_agent.py
-│  ├─ voice_notes_agent.py
-│  └─ website_agent.py
 ├─ ai_chatbot
-│  ├─ .env
-│  ├─ config
-│  │  ├─ models.py
-│  │  └─ settings.py
-│  ├─ controller
-│  │  ├─ chat_controller.py
-│  │  ├─ fallback_controller.py
-│  │  ├─ mode_controller.py
-│  │  └─ session_manager.py
-│  ├─ intelligence
-│  │  ├─ context_manager.py
-│  │  ├─ memory_summarizer.py
-│  │  ├─ prompt_builder.py
-│  │  ├─ query_classifier.py
-│  │  ├─ system_tools.py
-│  │  ├─ tool_router.py
-│  │  ├─ web_search.py
-│  │  └─ web_summarizer.py
-│  ├─ llm
-│  │  ├─ base_client.py
-│  │  ├─ deep_model.py
-│  │  ├─ fallback_model.py
-│  │  └─ fast_model.py
-│  ├─ requirements.txt
-│  ├─ utils
-│  │  ├─ clipboard.py
-│  │  └─ error_handler.py
-│  └─ __init__.py
 ├─ logs
-│  ├─ app_2026-00-00_00-00-00.log
-│  └─ archive
 ├─ resume_builder
-│  ├─ .env
-│  ├─ config
-│  │  ├─ models.py
-│  │  ├─ prompts.py
-│  │  ├─ settings.py
-│  │  └─ __init__.py
-│  ├─ core
-│  │  ├─ resume_agent.py
-│  │  ├─ resume_editor.py
-│  │  ├─ resume_schema.py
-│  │  ├─ resume_state.py
-│  │  ├─ resume_validator.py
-│  │  └─ __init__.py
-│  ├─ llm
-│  │  ├─ groq_client.py
-│  │  ├─ llm_router.py
-│  │  └─ __init__.py
-│  ├─ renderer
-│  │  ├─ docx_renderer.py
-│  │  ├─ layout_constants.py
-│  │  └─ __init__.py
-│  ├─ requirements.txt
-│  └─ __init__.py
 ├─ study_buddy
-│  ├─ .env
-│  ├─ config
-│  │  ├─ models.py
-│  │  └─ settings.py
-│  ├─ core
-│  │  ├─ chunker.py
-│  │  ├─ context_builder.py
-│  │  ├─ input_handler.py
-│  │  ├─ pdf_loader.py
-│  │  └─ quiz_state.py
-│  ├─ llm
-│  │  ├─ client.py
-│  │  └─ prompts.py
-│  ├─ pipelines
-│  │  ├─ explain.py
-│  │  ├─ quiz.py
-│  │  ├─ quiz_generator.py
-│  │  └─ summarize.py
-│  ├─ requirements.txt
-│  ├─ utils
-│  │  ├─ clipboard.py
-│  │  ├─ errors.py
-│  │  └─ status.py
-│  └─ __init__.py
 ├─ supervisor
-│  ├─ adapters
-│  │  └─ chat_adapter.py
-│  ├─ execution_router.py
-│  ├─ intent_classifier.py
-│  ├─ schemas.py
-│  ├─ shared_memory.py
-│  ├─ supervisor_agent.py
-│  └─ __init__.py
 ├─ ui
-│  ├─ app.py
-│  ├─ chat_area.py
-│  ├─ header.py
-│  ├─ log_viewer.py
-│  ├─ main_window.py
-│  ├─ sidebar.py
-│  ├─ status_bar.py
-│  ├─ theme.py
-│  ├─ workspace
-│  │  ├─ base.py
-│  │  ├─ chat_workspace.py
-│  │  ├─ resume_workspace.py
-│  │  ├─ study_buddy_workspace.py
-│  │  ├─ voice_notes_workspace.py
-│  │  └─ website_workspace.py
-│  └─ __init__.py
 ├─ utils
-│  ├─ logger.py
-│  ├─ log_manager.py
-│  └─ __init__.py
 ├─ voice_to_notes_generator
-│  ├─ .env
-│  ├─ assets
-│  │  └─ temp_audio
-│  ├─ config
-│  │  ├─ models.py
-│  │  ├─ settings.py
-│  │  └─ __init__.py
-│  ├─ pipelines
-│  │  ├─ audio_ingestion.py
-│  │  ├─ explain_answer.py
-│  │  ├─ notes_generator.py
-│  │  ├─ notes_qa.py
-│  │  ├─ transcription.py
-│  │  └─ __init__.py
-│  ├─ requirements.txt
-│  ├─ state
-│  │  ├─ lecture_state.py
-│  │  └─ __init__.py
-│  ├─ utils
-│  │  ├─ chunking.py
-│  │  ├─ docx_exporter.py
-│  │  ├─ prompt_templates.py
-│  │  ├─ safety.py
-│  │  └─ __init__.py
-│  └─ __init__.py
-└─ website_builder
-   ├─ .env
-   ├─ config
-   │  ├─ settings.py
-   │  └─ __init__.py
-   ├─ core
-   │  ├─ error_handler.py
-   │  ├─ generator.py
-   │  ├─ health_check.py
-   │  ├─ llm_client.py
-   │  ├─ prompt_processor.py
-   │  ├─ sanitizer.py
-   │  ├─ spec_inference.py
-   │  ├─ validator.py
-   │  └─ __init__.py
-   ├─ export
-   │  ├─ copy_manager.py
-   │  ├─ download_manager.py
-   │  └─ __init__.py
-   ├─ preview
-   │  ├─ live_preview.py
-   │  ├─ temp_site_manager.py
-   │  └─ __init__.py
-   ├─ requirements.txt
-   ├─ utils
-   │  ├─ file_utils.py
-   │  └─ __init__.py
-   └─ __init__.py
+├─ website_builder
+└─ .env
 ```
+
+👉 [ Click here to view the complete project folder structure ](https://drive.google.com/file/d/1klqxxg8NN-soYCJAZ7n2k8FKB7TdsW-w/view?usp=sharing)
 
 ### Key Component Descriptions
 
@@ -534,7 +407,7 @@ Response Processing
     ↓
 [Chat View] → Display Response
     ↓
-Conversation Log Updated
+Conversation Log Updated → Central Log Viewer
 ```
 
 **Key Decision Points:**
@@ -565,7 +438,7 @@ User Action Selection:
     ↓
 [Study Buddy View] → Display Result
     ↓
-Conversation Log Updated
+Conversation Log Updated → Central Log Viewer
 ```
 
 **Processing Steps:**
@@ -606,6 +479,9 @@ Structured Lecture Notes
                      Llama 3.3 70B
                           ↓
                     Answer Display
+
+    ↓
+Conversation Log Updated → Central Log Viewer
 ```
 
 **Processing Pipeline:**
@@ -648,6 +524,9 @@ generated_resume.docx
    View Resume      Edit Section      Download DOCX
         ↓                 ↓                 ↓
   [Text Display]   [Editor Assist]    [File Export]
+
+    ↓
+Conversation Log Updated → Central Log Viewer
 ```
 
 **Editor Assist Flow:**
@@ -667,6 +546,8 @@ Updated Section Content
 [DOCX Renderer] → Re-render Resume
     ↓
 Updated generated_resume.docx
+    ↓
+Conversation Log Updated → Central Log Viewer
 ```
 
 **Data Transformation:**
@@ -712,6 +593,9 @@ Clean, Valid HTML
    Live Preview       Copy Code         Download
         ↓                 ↓                 ↓
   [Browser Open]     [Clipboard]       [File Save] - [.html]
+
+    ↓
+Conversation Log Updated → Central Log Viewer
 ```
 
 **Quality Pipeline:**
