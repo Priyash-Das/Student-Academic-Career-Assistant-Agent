@@ -84,7 +84,7 @@ All agents are integrated with a **centralized logging system** for debugging, m
 > This video walkthrough demonstrates the complete functionality of the ***Student Academic & Career Assistant*** application, including agent orchestration, real-time interactions, and end-to-end workflows. The demo covers the General Chat Agent, Study Buddy (explanation, summaries, quizzes), Voice-to-Notes transcription, Resume Builder with DOCX export, Website Builder, and the centralized log viewer showcasing real-time system observability.
 
 ### Video Walkthrough
-👉 [ Click here to watch the all video demos ]() 👈
+👉 [ Click here to watch the all video demos ](https://drive.google.com/drive/folders/1e-v67HTZXuMtuLN70vXPeGBsGDMNCGU5?usp=sharing) 👈
 
 ---
 
