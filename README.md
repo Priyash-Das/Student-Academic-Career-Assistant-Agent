@@ -839,8 +839,8 @@ Edit `Student-Academic-&-Career-Assistant/.env` and add your API keys:
 ```env
 # ===== GLOBAL KEYS =====
 GOOGLE_API_KEY=your_google_api_key_here
-HF_API_KEY=hf_your_huggingface_token_here
-GROQ_API_KEY=gsk_your_groq_api_key_here
+HF_API_KEY=your_huggingface_token_here
+GROQ_API_KEY=your_groq_api_key_here
 SERPAPI_KEY=your_serpapi_key_here
 
 # ===== CHAT AGENT =====
@@ -867,15 +867,14 @@ Edit `Student-Academic-&-Career-Assistant/ai_chatbot/.env` and add your API keys
 
 ```env
 GOOGLE_API_KEY=your_google_api_key_here
-HF_API_KEY=hf_your_huggingface_token_here
-GROQ_API_KEY=gsk_your_groq_api_key_here
+HF_API_KEY=your_huggingface_token_here
+GROQ_API_KEY=your_groq_api_key_here
 SERPAPI_KEY=your_serpapi_key_here
 
 CHATBOT_DEFAULT=gemini-2.5-flash
 CHATBOT_DEEP=llama-3.3-70b-versatile
 CHATBOT_FALLBACK=tencent/WeDLM-8B-Instruct
 
-# EXECUTION SETTINGS
 MAX_RETRIES=1
 REQUEST_TIMEOUT=30
 MAX_CONTEXT_MESSAGES=10
@@ -885,8 +884,8 @@ Edit `Student-Academic-&-Career-Assistant/study_buddy/.env` and add your API key
 
 ```env
 GOOGLE_API_KEY=your_google_api_key_here
-HF_API_KEY=hf_your_huggingface_token_here
-GROQ_API_KEY=gsk_your_groq_api_key_here
+HF_API_KEY=your_huggingface_token_here
+GROQ_API_KEY=your_groq_api_key_here
 
 STUDY_READER_MODEL=Qwen/Qwen2.5-7B-Instruct
 STUDY_EXPLAIN_MODEL=llama-3.3-70b-versatile
@@ -897,8 +896,8 @@ Edit `Student-Academic-&-Career-Assistant/voice_to_notes_generator/.env` and add
 
 ```env
 GOOGLE_API_KEY=your_google_api_key_here
-HF_API_KEY=hf_your_huggingface_token_here
-GROQ_API_KEY=gsk_your_groq_api_key_here
+HF_API_KEY=your_huggingface_token_here
+GROQ_API_KEY=your_groq_api_key_here
 
 TRANSCRIBE_MODEL=whisper-large-v3
 LECTURE_NOTES_MODEL=gemini-1.5-flash
@@ -908,7 +907,7 @@ NOTES_QA_MODEL=llama-3.3-70b-versatile
 Edit `Student-Academic-&-Career-Assistant/resume_builder/.env` and add your API keys:
 
 ```env
-GROQ_API_KEY=gsk_your_groq_api_key_here
+GROQ_API_KEY=your_groq_api_key_here
 
 RESUME_GENERATION_MODEL=llama-3.3-70b-versatile
 EDITOR_ASSIST_MODEL=llama-3.3-70b-versatile
@@ -917,7 +916,7 @@ EDITOR_ASSIST_MODEL=llama-3.3-70b-versatile
 Edit `Student-Academic-&-Career-Assistant/website_builder/.env` and add your API keys:
 
 ```env
-GROQ_API_KEY=gsk_your_groq_api_key_here
+GROQ_API_KEY=your_groq_api_key_here
 
 WEBSITE_MODEL=llama-3.3-70b-versatile
 ```
