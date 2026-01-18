@@ -2,7 +2,7 @@
 
 ---
 
-> AI-powered Multi-Agent System
+> AI-powered Multi-Agent System ✰
 
 > A comprehensive AI assistant platform powered by multiple specialized agents for ***chat***, ***study***, ***transcription***, ***resume building***, and ***website generation***.
 
