@@ -81,15 +81,10 @@ All agents are integrated with a **centralized logging system** for debugging, m
 
 ## 🎬 Demo
 
-### Video Walkthrough
-[📺 Watch Full Demo](#) *(will-soon)*
+> This video walkthrough demonstrates the complete functionality of the ***Student Academic & Career Assistant*** application, including agent orchestration, real-time interactions, and end-to-end workflows. The demo covers the General Chat Agent, Study Buddy (explanation, summaries, quizzes), Voice-to-Notes transcription, Resume Builder with DOCX export, Website Builder, and the centralized log viewer showcasing real-time system observability.
 
-### More Screenshots
-- [Chat Agent](#)
-- [Study Buddy](#)
-- [Audio to Lecture Notes](#)
-- [Resume Builder](#)
-- [Website Builder](#)
+### Video Walkthrough
+👉 [ Click here to watch the all video demos ]() 👈
 
 ---
 
@@ -365,7 +360,9 @@ Student-Academic-&-Career-Assistant/
 └─ .env
 ```
 
-👉 [ Click here to view the complete project folder structure ](https://drive.google.com/file/d/1klqxxg8NN-soYCJAZ7n2k8FKB7TdsW-w/view?usp=sharing)
+### Complete project folder structure
+
+👉 [ Click here to view the complete project folder structure ](https://drive.google.com/file/d/1klqxxg8NN-soYCJAZ7n2k8FKB7TdsW-w/view?usp=sharing) 👈
 
 ### Key Component Descriptions
 
