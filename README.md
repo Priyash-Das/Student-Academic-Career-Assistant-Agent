@@ -322,13 +322,13 @@ A comprehensive dashboard providing real-time visibility into the system's inter
 
 ```
         ┌─────────────────────────────────────────────────────────────┐
-        │                   User Interface (Tkinter)                  │
-        │             ui/app.py – Unified Desktop Application         │< ─ ─ ─ ─ ─ ─┐
+        │                         User Interface                      │
+        │                  Unified Desktop Application                │< ─ ─ ─ ─ ─ ─┐
         └───────────────────────────────┬─────────────────────────────┘             │
                                         │                                           │
-        ┌───────────────────────────────┴─────────────────────────────┐             │
-        │                   Supervisor Agent Layer                    │             │
-        │        supervisor/supervisor_agent.py – Orchestration       │             │
+        ┌───────────────────────────────▼─────────────────────────────┐             │
+        │                       Supervisor Agent                      │             │
+        │                  Application Control Layer                  │             │
         └───┬─────────┬───────────────┬───────────────┬──────────┬────┘             │
             │         │               │               │          │                  │
 ┌───────────▼┐ ┌──────▼──────┐ ┌──────▼──────┐ ┌──────▼───────┐ ┌▼──────────────┐   │
