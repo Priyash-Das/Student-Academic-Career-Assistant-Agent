@@ -683,6 +683,8 @@ Before installing, ensure you have:
   - Groq
   - Hugging Face
   - SerpAPI
+ 
+👉 [ Setup demo video ](https://drive.google.com/file/d/1vrhLqPImWd-bPZHUWUeyMWhgNKrFA2VO/view?usp=sharing) 👈
 
 ### Step 1: Clone the Repository
 
