@@ -346,7 +346,7 @@ A comprehensive dashboard providing real-time visibility into the system's inter
 ### Directory Structure
 
 ```
-Student-Academic-&-Career-Assistant/
+Student-Academic-Career-Assistant-Agent/
 ├─ agents
 ├─ ai_chatbot
 ├─ logs
@@ -688,7 +688,7 @@ Before installing, ensure you have:
 
 ```bash
 git clone https://github.com/Priyash-Das/Student-Academic-Career-Assistant-Agent.git
-cd Student-Academic-&-Career-Assistant
+cd Student-Academic-Career-Assistant-Agent
 ```
 
 ### Step 2: Create Virtual Environment (Recommended)
@@ -752,7 +752,7 @@ pip install -r website_builder/requirements.txt
 
 Create `.env` / Rename `env.example.txt` to `.env`:
 
-Edit `Student-Academic-&-Career-Assistant/.env` and add your API keys:
+Edit `Student-Academic-Career-Assistant-Agent/.env` and add your API keys:
 
 ```env
 # ===== GLOBAL KEYS =====
@@ -781,7 +781,7 @@ EDITOR_ASSIST_MODEL=llama-3.3-70b-versatile
 WEBSITE_MODEL=llama-3.3-70b-versatile
 ```
 
-Edit `Student-Academic-&-Career-Assistant/ai_chatbot/.env` and add your API keys:
+Edit `Student-Academic-Career-Assistant-Agent/ai_chatbot/.env` and add your API keys:
 
 ```env
 GOOGLE_API_KEY=your_google_api_key_here
@@ -798,7 +798,7 @@ REQUEST_TIMEOUT=30
 MAX_CONTEXT_MESSAGES=10
 ```
 
-Edit `Student-Academic-&-Career-Assistant/study_buddy/.env` and add your API keys:
+Edit `Student-Academic-Career-Assistant-Agent/study_buddy/.env` and add your API keys:
 
 ```env
 GOOGLE_API_KEY=your_google_api_key_here
@@ -810,7 +810,7 @@ STUDY_EXPLAIN_MODEL=llama-3.3-70b-versatile
 STUDY_SUMMARY_MODEL=gemini-2.5-flash
 STUDY_QUIZ_MODEL=gemini-2.5-flash
 ```
-Edit `Student-Academic-&-Career-Assistant/voice_to_notes_generator/.env` and add your API keys:
+Edit `Student-Academic-Career-Assistant-Agent/voice_to_notes_generator/.env` and add your API keys:
 
 ```env
 GOOGLE_API_KEY=your_google_api_key_here
@@ -822,7 +822,7 @@ LECTURE_NOTES_MODEL=gemini-1.5-flash
 NOTES_QA_MODEL=llama-3.3-70b-versatile
 ```
 
-Edit `Student-Academic-&-Career-Assistant/resume_builder/.env` and add your API keys:
+Edit `Student-Academic-Career-Assistant-Agent/resume_builder/.env` and add your API keys:
 
 ```env
 GROQ_API_KEY=your_groq_api_key_here
@@ -831,7 +831,7 @@ RESUME_GENERATION_MODEL=llama-3.3-70b-versatile
 EDITOR_ASSIST_MODEL=llama-3.3-70b-versatile
 ```
 
-Edit `Student-Academic-&-Career-Assistant/website_builder/.env` and add your API keys:
+Edit `Student-Academic-Career-Assistant-Agent/website_builder/.env` and add your API keys:
 
 ```env
 GROQ_API_KEY=your_groq_api_key_here
