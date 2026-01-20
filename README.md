@@ -684,7 +684,7 @@ Before installing, ensure you have:
   - Hugging Face
   - SerpAPI
  
-👉 [ Setup demo video ](https://drive.google.com/file/d/1vrhLqPImWd-bPZHUWUeyMWhgNKrFA2VO/view?usp=sharing) 👈
+👉 [ Setup demo video ](https://drive.google.com/file/d/1LAPqUdwYJJVRZX0l3d9a3Cmbp4zhpHDR/view?usp=sharing) 👈
 
 ### Step 1: Clone the Repository
 
